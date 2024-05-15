@@ -78,26 +78,26 @@ Each class in the project serves a specific purpose:
 
 cpp
 
-#include "Graph.hpp"
-#include <iostream>
+    #include "Graph.hpp"
+    #include <iostream>
 
-int main() {
-    ariel::Graph g1(3);
-    std::vector<std::vector<int>> matrix = {
-        {0, 1, 0},
-        {1, 0, 1},
-        {0, 1, 0}
-    };
-    g1.loadGraph(matrix);
-    std::cout << "Graph g1:" << std::endl;
-    std::cout << g1.printGraph() << std::endl;
+        int main() {
+            ariel::Graph g1(3);
+            std::vector<std::vector<int>> matrix = {
+                {0, 1, 0},
+                {1, 0, 1},
+                {0, 1, 0}
+            };
+            g1.loadGraph(matrix);
+            std::cout << "Graph g1:" << std::endl;
+            std::cout << g1.printGraph() << std::endl;
 
-    ariel::Graph g2 = g1 * 2;
-    std::cout << "Graph g2 (g1 * 2):" << std::endl;
-    std::cout << g2.printGraph() << std::endl;
+            ariel::Graph g2 = g1 * 2;
+            std::cout << "Graph g2 (g1 * 2):" << std::endl;
+            std::cout << g2.printGraph() << std::endl;
 
-    return 0;
-}
+            return 0;
+        }
 
 
 # מטלה 2 - גרפים והעמסת אופרטורים
