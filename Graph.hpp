@@ -1,3 +1,8 @@
+/*
+efiphi10@gmail.com
+318591823
+*/
+
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
 
@@ -30,15 +35,16 @@ public:
     // Arithmetic Operators
     Graph operator+(const Graph& other) const;
     Graph& operator+=(const Graph& other);
-    Graph operator-() const;
     Graph operator-(const Graph& other) const;
     Graph& operator-=(const Graph& other);
+    Graph operator+() const;
+    Graph operator-() const;
+
+    //multiplication operators
     Graph operator*(int scalar) const;
     Graph& operator*=(int scalar);
     Graph operator*(const Graph& other) const;
 
-    // Unary plus operator
-    Graph operator+() const;
 
     // Comparison Operators
     bool operator==(const Graph& other) const;

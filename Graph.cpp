@@ -1,3 +1,8 @@
+/*
+efiphi10@gmail.com
+318591823
+*/
+
 #include "Graph.hpp"
 #include <sstream>
 using namespace std;
@@ -88,15 +93,6 @@ Graph& Graph::operator+=(const Graph& other) {
     return *this;
 }
 
-Graph Graph::operator-() const {
-    Graph result(size);
-    for (size_t i = 0; i < static_cast<size_t>(size); ++i) {
-        for (size_t j = 0; j < static_cast<size_t>(size); ++j) {
-            result.adjMatrix[i][j] = -adjMatrix[i][j];
-        }
-    }
-    return result;
-}
 
 Graph Graph::operator-(const Graph& other) const {
     if (size == 0 || other.size == 0) {
@@ -129,9 +125,19 @@ Graph& Graph::operator-=(const Graph& other) {
     return *this;
 }
 
-// Unary plus operator
+
 Graph Graph::operator+() const {
     return *this;
+}
+
+Graph Graph::operator-() const {
+    Graph result(size);
+    for (size_t i = 0; i < static_cast<size_t>(size); ++i) {
+        for (size_t j = 0; j < static_cast<size_t>(size); ++j) {
+            result.adjMatrix[i][j] = -adjMatrix[i][j];
+        }
+    }
+    return result;
 }
 
 // Comparison Operators
