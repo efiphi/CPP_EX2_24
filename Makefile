@@ -38,6 +38,6 @@ valgrind: demo test
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
-# Rule to clean up generated files
+# Rule to clean up generated files 
 clean:
 	rm -f *.o demo test
